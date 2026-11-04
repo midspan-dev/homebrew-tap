@@ -5,21 +5,21 @@
 class Agentgw < Formula
   desc "Policy-enforcing MCP proxy with a signed, independently verifiable history"
   homepage "https://github.com/midspan-dev/agentgw"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/midspan-dev/agentgw/releases/download/v0.3.0/agentgw_0.3.0_darwin_amd64.tar.gz"
-      sha256 "0c3cc61855d609e1f40ba80574d1a70fe6974f3855622045f1c7ddb2391ec825"
+      url "https://github.com/midspan-dev/agentgw/releases/download/v0.4.0/agentgw_0.4.0_darwin_amd64.tar.gz"
+      sha256 "f531e2bbedfaff3f32b48a730769e52d2fbd621f70aad46411ea2738b1ae8ed8"
 
       define_method(:install) do
         bin.install "agentgw"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/midspan-dev/agentgw/releases/download/v0.3.0/agentgw_0.3.0_darwin_arm64.tar.gz"
-      sha256 "28dc8c0e63388b971e245241c954eb59dcddd4e1376ab10f8063670e5e8121b3"
+      url "https://github.com/midspan-dev/agentgw/releases/download/v0.4.0/agentgw_0.4.0_darwin_arm64.tar.gz"
+      sha256 "7d0522ffda7e59bde630dcc279e950cac4d7f0f4cf4b9f274580bcbdfa852c0a"
 
       define_method(:install) do
         bin.install "agentgw"
@@ -29,15 +29,15 @@ class Agentgw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/midspan-dev/agentgw/releases/download/v0.3.0/agentgw_0.3.0_linux_amd64.tar.gz"
-      sha256 "d3b34c24bf8d9e3cc91839f5741aa8cac62bc96a1f65522abb0dbd5e338a062e"
+      url "https://github.com/midspan-dev/agentgw/releases/download/v0.4.0/agentgw_0.4.0_linux_amd64.tar.gz"
+      sha256 "f685417aa2d9d08a93d490c93490667b217ed0c736a107bac2fe53197de298d8"
       define_method(:install) do
         bin.install "agentgw"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/midspan-dev/agentgw/releases/download/v0.3.0/agentgw_0.3.0_linux_arm64.tar.gz"
-      sha256 "7fa868477146156bd777e1ae787d1aed79cfee1d516c4b82aaf9ada6eb788400"
+      url "https://github.com/midspan-dev/agentgw/releases/download/v0.4.0/agentgw_0.4.0_linux_arm64.tar.gz"
+      sha256 "75c670ac77acf20a6c94d2cc6708c789c37b1dee640a96281e5b3d621c63fd17"
       define_method(:install) do
         bin.install "agentgw"
       end
